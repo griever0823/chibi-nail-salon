@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">CHIBI NAIL — Korean neutral logo</title>
+  <desc id="desc">A contemporary pale-neutral CHIBI NAIL wordmark with a small offset dot motif.</desc>
+  <rect width="1600" height="900" fill="#F1F0E8"/>
+  <g text-anchor="middle">
+    <text x="800" y="441" fill="#4D5D50" font-family="Didot, Bodoni Moda, Times New Roman, serif" font-size="226" font-weight="600" letter-spacing="-13">CHIBI</text>
+    <circle cx="1040" cy="290" r="13" fill="#899477"/>
+    <text x="800" y="531" fill="#687567" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="29" font-weight="600" letter-spacing="12">NAIL SALON</text>
+  </g>
+</svg>

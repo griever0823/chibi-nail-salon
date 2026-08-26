@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">CHIBI NAIL — Minimal logo</title>
+  <desc id="desc">A refined minimal wordmark in warm taupe on ivory.</desc>
+  <rect width="1600" height="900" fill="#F7F2EB"/>
+  <g fill="#536454">
+    <text x="800" y="438" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="244" font-weight="600" letter-spacing="-12">CHIBI</text>
+    <rect x="590" y="493" width="420" height="2" rx="1" fill="#AAB19A"/>
+    <text x="800" y="564" text-anchor="middle" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="38" font-weight="500" letter-spacing="14">NAIL SALON</text>
+  </g>
+</svg>

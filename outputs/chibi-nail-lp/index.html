@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CHANGE: 公開前に店舗情報に合わせて書き換えてください -->
+    <title>
+      CHIBI NAIL SALON｜手元から、私らしく。
+    </title>
+    <meta name="description" content="CHIBI NAIL SALONは、繊細なデザインと心地よい時間を大切にするネイルサロンです。ご予約はNAILY、ホットペッパービューティー、minimo、Instagramから。">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CHIBI NAIL SALON｜手元から、私らしく。">
+    <meta property="og:description" content="繊細なデザインと心地よい時間を大切にするネイルサロン。">
+    <meta property="og:image" content="assets/logo/chibi-nail-logo.svg">
+    <meta property="og:locale" content="ja_JP">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!--
+      ==================== 編集ガイド ====================
+      1. 店舗名・キャッチコピー: HERO セクション
+      2. メニュー・料金: MENU セクションの [ ] 内
+      3. スタッフ情報: STAFF セクションの [ ] 内
+      4. 住所・営業時間・Google Maps URL: ACCESS セクションの [ ] 内
+      5. 予約URL: RESERVATION と FOOTER の [ ] 内
+      6. ギャラリー写真: assets/images/ と js/main.js の galleryItems
+      ====================================================
+    -->
+    <a class="skip-link" href="#main">
+      本文へ移動
+    </a>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="CHIBI NAIL SALON ホーム">
+        <span>
+          CHIBI
+        </span>
+        <small>
+          NAIL SALON
+        </small>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+        <span>
+        </span>
+        <span>
+        </span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="メインナビゲーション" data-menu>
+        <a href="#concept">
+          CONCEPT
+        </a>
+        <a href="#gallery">
+          DESIGN
+        </a>
+        <a href="#menu">
+          MENU
+        </a>
+        <a href="#access">
+          ACCESS
+        </a>
+        <a class="button button--small" href="#reservation">
+          予約する
+        </a>
+      </nav>
+    </header>
+    <main id="main">
+      <!-- HERO: キャッチコピーと紹介文は、このセクションの文章を編集 -->
+      <section id="top" class="hero" aria-labelledby="hero-title">
+        <div class="hero__content reveal">
+          <p class="eyebrow">
+            TOKYO / NAIL SALON
+          </p>
+          <h1 id="hero-title">
+            <span>
+              CHIBI
+            </span>
+            <small>
+              NAIL SALON
+            </small>
+          </h1>
+          <p class="hero__lead">
+            手元から、私らしく。
+          </p>
+          <p class="hero__copy">
+            毎日に静かになじみ、ふと気分が上がる。
+            <br>
+            あなたのためのニュアンスを、丁寧に仕立てます。
+          </p>
+          <a class="button" href="#reservation">
+            予約する
+            <span aria-hidden="true">
+              →
+            </span>
+          </a>
+        </div>
+        <div class="hero__art" aria-hidden="true">
+          <div class="hero__shape">
+          </div>
+          <div class="hero__dot">
+          </div>
+          <p>
+            CHIBI
+            <br>
+            NAIL
+          </p>
+        </div>
+      </section>
+      <!-- CONCEPT: サロンの特徴・想いを編集 -->
+      <section id="concept" class="section concept" aria-labelledby="concept-title">
+        <div class="section__label reveal">
+          <p class="eyebrow">
+            01 / CONCEPT
+          </p>
+        </div>
+        <div class="concept__content reveal">
+          <h2 id="concept-title">
+            デザインも、
+            <br>
+            過ごす時間も心地よく。
+          </h2>
+          <p>
+            CHIBI NAIL SALONは、色、質感、余白のバランスを大切にするプライベートネイルサロンです。ライフスタイルと好みに寄り添いながら、指先が自然と目に入るたび、少し嬉しくなるデザインをご提案します。
+          </p>
+          <a class="text-link" href="#gallery">
+            デザインを見る
+            <span aria-hidden="true">
+              →
+            </span>
+          </a>
+        </div>
+      </section>
+      <!-- GALLERY: 画像は HTML ではなく js/main.js の galleryItems で管理 -->
+      <section id="gallery" class="section gallery" aria-labelledby="gallery-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">
+              02 / DESIGN
+            </p>
+            <h2 id="gallery-title">
+              NAIL GALLERY
+            </h2>
+          </div>
+          <p>
+            季節や気分に合わせた、繊細なデザイン。
+          </p>
+        </div>
+        <!-- CHANGE: js/main.js の galleryItems に画像と情報を追加してください -->
+        <div id="gallery-grid" class="gallery-grid" aria-live="polite">
+        </div>
+        <a class="button button--outline reveal" href="#reservation">
+          このデザインを相談する
+          <span aria-hidden="true">
+            →
+          </span>
+        </a>
+      </section>
+      <!-- MENU: メニュー名、施術時間、料金を編集 -->
+      <section id="menu" class="section menu" aria-labelledby="menu-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">
+              03 / MENU
+            </p>
+            <h2 id="menu-title">
+              MENU
+            </h2>
+          </div>
+          <p>
+            ご希望を伺いながらご提案します。
+          </p>
+        </div>
+        <!-- CHANGE: 料金・施術時間・オフ料金を確定後に下記へ入力してください -->
+        <div class="menu-grid reveal">
+          <article>
+            <h3>
+              ONE COLOR
+            </h3>
+            <p class="menu-meta">
+              施術時間 [施術時間]
+            </p>
+            <p class="price">
+              [メニュー料金]
+            </p>
+          </article>
+          <article>
+            <h3>
+              DESIGN COURSE
+            </h3>
+            <p class="menu-meta">
+              施術時間 [施術時間]
+            </p>
+            <p class="price">
+              [メニュー料金]
+            </p>
+          </article>
+          <article>
+            <h3>
+              ART COURSE
+            </h3>
+            <p class="menu-meta">
+              施術時間 [施術時間]
+            </p>
+            <p class="price">
+              [メニュー料金]
+            </p>
+          </article>
+          <article>
+            <h3>
+              OFF
+            </h3>
+            <p class="menu-meta">
+              付替え／オフのみ
+            </p>
+            <p class="price">
+              [オフ料金]
+            </p>
+          </article>
+        </div>
+        <p class="note reveal">
+          ※ デザイン・パーツ・長さ出し等により料金が変動する場合があります。
+        </p>
+      </section>
+      <!-- STAFF: 名前、プロフィール、得意なデザイン、Instagramを編集 -->
+      <section id="staff" class="section staff" aria-labelledby="staff-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">
+              04 / STAFF
+            </p>
+            <h2 id="staff-title">
+              STAFF
+            </h2>
+          </div>
+        </div>
+        <!-- CHANGE: assets/images/staff.jpg を実際のスタッフ写真に置き換えてください -->
+        <div class="staff-card reveal">
+          <div class="staff-image placeholder-image">
+            <span>
+              STAFF
+              <br>
+              PHOTO
+            </span>
+          </div>
+          <div class="staff-copy">
+            <p class="eyebrow">
+              NAIL ARTIST
+            </p>
+            <h3>
+              [スタッフ名]
+            </h3>
+            <p>
+              [プロフィール] お客様の雰囲気や日常に寄り添う、やわらかなニュアンスデザインを大切にしています。
+            </p>
+            <dl>
+              <div>
+                <dt>
+                  SPECIALTY
+                </dt>
+                <dd>
+                  [得意なデザイン]
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  INSTAGRAM
+                </dt>
+                <dd>
+                  <a href="[Instagram URL]" target="_blank" rel="noopener noreferrer">
+                    @[Instagram account]
+                  </a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <!-- ACCESS: 住所、駅、営業時間、定休日、Google Maps URLを編集 -->
+      <section id="access" class="section access" aria-labelledby="access-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">
+              05 / ACCESS
+            </p>
+            <h2 id="access-title">
+              ACCESS
+            </h2>
+          </div>
+        </div>
+        <!-- CHANGE: 住所・駅名・営業時間・地図URLを入力してください -->
+        <div class="access-grid reveal">
+          <div class="access-map">
+            <iframe src="https://www.google.com/maps?q=35.6979721,139.8177739&output=embed"
+            loading="lazy"
+            allowfullscreen>
+            </iframe>
+          </div>
+          <dl class="details">
+            <div>
+              <dt>
+                ADDRESS
+              </dt>
+              <dd>
+                〒130-0013 東京都墨田区錦糸４丁目１１−６ 佐々木ビル
+              </dd>
+            </div>
+            <div>
+              <dt>
+                STATION
+              </dt>
+              <dd>
+                錦糸町 徒歩5分
+              </dd>
+            </div>
+            <div>
+              <dt>
+                OPEN
+              </dt>
+              <dd>
+                08:00–23:30
+              </dd>
+            </div>
+            <div>
+              <dt>
+                CLOSED
+              </dt>
+              <dd>
+                木曜・日曜（予定）
+              </dd>
+            </div>
+          </dl>
+        </div>
+        <a class="text-link reveal" href="https://www.google.com/maps/place/〒130-0013+東京都墨田区錦糸４丁目１１−６+佐々木ビル/@35.6979721,139.8177739,17z/data=!4m6!3m5!1s0x601888d75cfd14e9:0xa33ad388bb9a7503!8m2!3d35.6979721!4d139.8177739!16s%2Fg%2F12hp6k22j?entry=ttu&g_ep=EgoyMDI2MDgwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+          Google Mapsで見る
+          <span aria-hidden="true">
+            ↗
+          </span>
+        </a>
+      </section>
+      <!-- RESERVATION: 4つの予約URLを編集 -->
+      <section id="reservation" class="reservation" aria-labelledby="reservation-title">
+        <div class="reservation__inner reveal">
+          <p class="eyebrow">
+            06 / RESERVATION
+          </p>
+          <h2 id="reservation-title">
+            ご予約
+          </h2>
+          <p>
+            ご都合のよい予約サイトからお選びください。
+          </p>
+          <!-- CHANGE: 各 href を実際の予約URLに必ず差し替えてください -->
+          <div class="reservation-links">
+            <a href="[NAILY予約URL]" target="_blank" rel="noopener noreferrer">
+              NAILY
+              <span>
+                →
+              </span>
+            </a>
+            <a href="[ホットペッパー予約URL]" target="_blank" rel="noopener noreferrer">
+              Hot Pepper Beauty
+              <span>
+                →
+              </span>
+            </a>
+            <a href="[minimo予約URL]" target="_blank" rel="noopener noreferrer">
+              minimo
+              <span>
+                →
+              </span>
+            </a>
+            <a href="[Instagram URL]" target="_blank" rel="noopener noreferrer">
+              Instagram
+              <span>
+                →
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- INFORMATION: 支払い方法、キャンセル規約、注意事項を編集 -->
+      <section id="information" class="section information" aria-labelledby="information-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">
+              07 / INFORMATION
+            </p>
+            <h2 id="information-title">
+              INFORMATION
+            </h2>
+          </div>
+        </div>
+        <!-- CHANGE: 運用ルール確定後に、下記の [ ] 内を編集してください -->
+        <div class="accordion reveal">
+          <details>
+            <summary>
+              お支払い方法
+            </summary>
+            <p>
+              [ご利用可能な支払い方法]
+            </p>
+          </details>
+          <details>
+            <summary>
+              キャンセルポリシー
+            </summary>
+            <p>
+              [キャンセルポリシー]
+            </p>
+          </details>
+          <details>
+            <summary>
+              ご来店前の注意事項
+            </summary>
+            <p>
+              [ご予約前に確認してほしい事項]
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER: Instagram URLを RESERVATION と同じURLへ編集 -->
+    <footer class="site-footer">
+      <a class="brand brand--footer" href="#top">
+        <span>
+          CHIBI
+        </span>
+        <small>
+          NAIL SALON
+        </small>
+      </a>
+      <div>
+        <a href="[Instagram URL]" target="_blank" rel="noopener noreferrer">
+          INSTAGRAM
+        </a>
+        <a href="#reservation">
+          RESERVATION
+        </a>
+      </div>
+      <p>
+        ©
+        <span data-year>
+        </span>
+        CHIBI NAIL SALON
+      </p>
+    </footer>
+    <a class="mobile-cta" href="#reservation">
+      予約する
+      <span aria-hidden="true">
+        →
+      </span>
+    </a>
+    <dialog class="lightbox" data-lightbox>
+      <button class="lightbox__close" type="button" aria-label="拡大画像を閉じる" data-lightbox-close>
+        ×
+      </button>
+      <img src="" alt="" data-lightbox-image>
+      <p data-lightbox-caption>
+      </p>
+    </dialog>
+    <script src="js/main.js">
+    </script>
+  </body>
+</html>
