@@ -335,33 +335,41 @@ a {
   background: var(--white);
 }
 
-.menu-grid {
+.menu-layout {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(3rem, 6vw, 6rem) clamp(2rem, 5vw, 5rem);
+}
+
+.menu-category-block {
+  min-width: 0;
+}
+
+.menu-category {
+  margin: 0 0 1.1rem;
+  font: 1.1rem/1.35 var(--serif);
+  letter-spacing: .02em;
+}
+
+.menu-category__items {
   border-top: 1px solid var(--line);
 }
 
-.menu-grid article {
-  padding: 1.6rem 0;
+.menu-category__items article {
+  min-width: 0;
+  padding: 1.15rem 0;
   border-bottom: 1px solid var(--line);
   display: grid;
-  grid-template-columns: 1.4fr 1fr .7fr;
-  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) max-content max-content;
+  gap: .75rem;
   align-items: baseline;
 }
 
-.menu-grid article:nth-child(odd) {
-  padding-right: 2rem;
-}
-
-.menu-grid article:nth-child(even) {
-  padding-left: 2rem;
-}
-
-.menu-grid h3 {
+.menu-category__items h3 {
   margin: 0;
-  font: 1.35rem var(--serif);
+  font: 1.15rem/1.35 var(--serif);
   letter-spacing: .02em;
+  overflow-wrap: anywhere;
 }
 
 .menu-meta,
@@ -373,6 +381,7 @@ a {
 
 .price {
   text-align: right;
+  white-space: nowrap;
 }
 
 .note {
@@ -717,14 +726,33 @@ a {
     aspect-ratio: 1.25;
   }
 
-  .menu-grid {
+  .menu-layout {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
-  .menu-grid article,
-  .menu-grid article:nth-child(n) {
-    padding: 1.2rem 0;
+  .menu-category {
+    margin-bottom: .8rem;
+    font-size: clamp(.85rem, 3.8vw, 1.05rem);
+  }
+
+  .menu-category__items article {
+    padding: 1rem 0;
     grid-template-columns: 1fr auto;
+    gap: .25rem .45rem;
+  }
+
+  .menu-category__items h3 {
+    grid-column: 1 / -1;
+    font-size: clamp(.9rem, 3.8vw, 1.1rem);
+    line-height: 1.35;
+  }
+
+  .menu-meta,
+  .price,
+  .note {
+    font-size: clamp(.58rem, 2.7vw, .72rem);
+    line-height: 1.55;
   }
 
   .menu-meta {
@@ -734,7 +762,7 @@ a {
 
   .price {
     grid-column: 2;
-    grid-row: 1 / 3;
+    grid-row: 2;
   }
 
   .staff-card,
