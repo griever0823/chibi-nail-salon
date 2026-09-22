@@ -3,18 +3,18 @@
   image: ファイルパス / title: 表示名 / category: 補助表記 / badge: "NEW" または "人気"（不要なら空文字）
 */
 const galleryItems = [
-  { image: 'assets/images/nail1.jpg', title: 'Olive nuance', category: 'NUANCE', badge: 'NEW' },
-  { image: 'assets/images/nail3.jpg', title: 'Soft french', category: 'FRENCH', badge: '人気' },
-  { image: 'assets/images/gallery-03.svg', title: 'Sheer beige', category: 'SIMPLE', badge: '' },
-  { image: 'assets/images/gallery-04.svg', title: 'Metal detail', category: 'ART', badge: '' },
-  { image: 'assets/images/gallery-05.svg', title: 'Moss marble', category: 'NUANCE', badge: 'NEW' },
-  { image: 'assets/images/gallery-06.svg', title: 'Milky pink', category: 'SIMPLE', badge: '' },
-  { image: 'assets/images/nail2.jpg', title: 'Milky pink', category: 'SIMPLE', badge: '' },
-  { image: 'assets/images/gallery-06.svg', title: 'Milky pink', category: 'SIMPLE', badge: '' },
-  { image: 'assets/images/nail2.jpg', title: 'Milky pink', category: 'SIMPLE', badge: '' },
-  { image: 'assets/images/gallery-06.svg', title: 'Milky pink', category: 'SIMPLE', badge: '' },
-  { image: 'assets/images/nail2.jpg', title: 'Milky pink', category: 'SIMPLE', badge: '' },
-  { image: 'assets/images/nail2.jpg', title: 'Milky pink', category: 'SIMPLE', badge: '' },
+  { image: 'assets/images/gallery-09.jpg', title: 'Monochrome Ribbon', category: 'ホワイトベース × ブラックリボン', badge: 'NEW' },
+  { image: 'assets/images/gallery-10.png', title: 'Royal Ruby Jewelry', category: 'ルビーハート × ゴールド透かしパーツ', badge: '' },
+  { image: 'assets/images/gallery-11.png', title: 'Royal Ruby Jewelry', category: 'ルビーハート × ゴールド透かしパーツ', badge: '' },
+  { image: 'assets/images/gallery-12.jpg', title: 'Sweet Ribbon Pink', category: 'パステルピンク × ホワイトパーツ', badge: 'PICKUP' },
+  { image: 'assets/images/gallery-13.jpg', title: 'Dark Black Cross', category: 'ブラックグラデーション × シルバークロス', badge: '人気' },
+  { image: 'assets/images/gallery-14.jpg', title: 'Sheer Ribbon Pink', category: 'シアーピンク × ホワイトリボン', badge: '' },
+  { image: 'assets/images/gallery-15.jpg', title: 'Crystal Butterfly & Ribbon', category: 'クリアベース × 3Dバタフライ＆レース', badge: 'NEW' },
+  { image: 'assets/images/gallery-17.jpg', title: '3D Pop Pink Heart', category: 'ビビッドピンク × ぷっくりハート', badge: '' },
+  { image: 'assets/images/gallery-16.jpg', title: 'Pastel Butterfly', category: '水色・イエロー × ゴールドバタフライ', badge: '' },
+  { image: 'assets/images/gallery-18.jpg', title: 'Innocent White Cross', category: 'クリアホワイト × 3Dクロス＆リボン', badge: '' },
+  { image: 'assets/images/gallery-19.jpg', title: 'Black × Pearl Texture', category: 'ブラックビーズ × シルバー＆ゴールドパーツ', badge: '' },
+  { image: 'assets/images/gallery-20.png', title: 'Cherry & Drip French', category: 'ホワイトベース × ボルドーチェリー', badge: '' },
 ];
 
 const gallery = document.querySelector('#gallery-grid');
@@ -30,6 +30,28 @@ galleryItems.forEach((item) => {
   gallery.appendChild(figure);
 });
 
+// ファーストビューロゴのアニメーション
+const heroShape = document.querySelector('.hero__shape');
+
+if (heroShape) {
+  let startTime = null;
+
+  const animateHeroShape = (time) => {
+    if (!startTime) startTime = time;
+    const elapsed = time - startTime;
+    const moveY = Math.sin(elapsed / 1400) * 12;
+    const moveX = Math.cos(elapsed / 1900) * 8;
+    const rotate = Math.sin(elapsed / 3000) * 3;
+    const scale = 1 + Math.sin(elapsed / 2000) * 0.035;
+    heroShape.style.transform =
+      `translate(${moveX}px, ${moveY}px) rotate(${rotate}deg) scale(${scale})`;
+    requestAnimationFrame(animateHeroShape);
+  };
+
+  requestAnimationFrame(animateHeroShape);
+}
+
+
 const lightbox = document.querySelector('[data-lightbox]');
 const lightboxImage = document.querySelector('[data-lightbox-image]');
 const lightboxCaption = document.querySelector('[data-lightbox-caption]');
@@ -38,6 +60,22 @@ document.querySelector('[data-lightbox-close]').addEventListener('click', () => 
 lightbox.addEventListener('click', (event) => { if (event.target === lightbox) lightbox.close(); });
 
 const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } }), { threshold: .12 });
+const storyVideo = document.querySelector('.placeholder-image video');
+
+// STORYビデオのアニメーション部分
+if (storyVideo) {
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        storyVideo.play();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  videoObserver.observe(storyVideo);
+}
+
+
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 
 const menuButton = document.querySelector('[data-menu-toggle]');
