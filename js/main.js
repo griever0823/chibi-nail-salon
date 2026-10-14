@@ -14,7 +14,15 @@ const galleryItems = [
   { image: 'assets/images/gallery-16.jpg', title: 'Pastel Butterfly', category: '水色・イエロー × ゴールドバタフライ', badge: '' },
   { image: 'assets/images/gallery-18.jpg', title: 'Innocent White Cross', category: 'クリアホワイト × 3Dクロス＆リボン', badge: '' },
   { image: 'assets/images/gallery-19.jpg', title: 'Black × Pearl Texture', category: 'ブラックビーズ × シルバー＆ゴールドパーツ', badge: '' },
-  { image: 'assets/images/gallery-20.png', title: 'Cherry & Drip French', category: 'ホワイトベース × ボルドーチェリー', badge: '' },
+  { image: 'assets/images/gallery-23.jpg', title: 'Cherry & Drip French', category: 'ホワイトベース × ボルドーチェリー', badge: '' },
+  { image: 'assets/images/gallery-24.jpg', title: '', category: '', badge: '' },
+  { image: 'assets/images/gallery-25.jpg', title: '', category: '', badge: '' },
+  { image: 'assets/images/gallery-26.jpg', title: '', category: '', badge: '' },
+  { image: 'assets/images/gallery-27.jpg', title: '', category: '', badge: '' },
+  { image: 'assets/images/gallery-28.jpg', title: '', category: '', badge: '' },
+  { image: 'assets/images/gallery-29.jpg', title: '', category: '', badge: '' },
+  { image: 'assets/images/gallery-30.jpg', title: '', category: '', badge: '' },
+
 ];
 
 const gallery = document.querySelector('#gallery-grid');
