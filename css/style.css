@@ -315,7 +315,7 @@ a {
   left: 0;
   right: 0;
   padding: 2.2rem 1.2rem 1.1rem;
-  color: var(--white);
+  color: rgba(251, 250, 246, 0.7);
   background: linear-gradient(transparent, rgba(30, 40, 30, .6));
   font-size: .7rem;
 }
